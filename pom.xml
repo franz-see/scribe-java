@@ -51,6 +51,17 @@
     <url>http://github.com/franz-see/scribe-java.git</url>
   </scm>
 
+  <distributionManagement>
+    <repository>
+      <id>repo</id>
+      <url>https://github.com/franz-see/maven-repo/raw/master/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshot-repo</id>
+      <url>https://github.com/franz-see/maven-repo/raw/master/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
   <dependencies>
     <dependency>
       <groupId>commons-codec</groupId>
@@ -74,6 +85,11 @@
           <source>1.5</source>
           <target>1.5</target>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.3.2</version>
       </plugin>
       <!--plugin>
         <groupId>org.apache.maven.plugins</groupId>
